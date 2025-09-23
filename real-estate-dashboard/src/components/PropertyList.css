@@ -1,0 +1,39 @@
+.property-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  padding: 0;
+}
+
+.empty-state {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+  background: #f9fafb;
+  border-radius: 12px;
+  border: 2px dashed #d1d5db;
+}
+
+.empty-state-content {
+  text-align: center;
+  color: #6b7280;
+}
+
+.empty-state-content h3 {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .property-list {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .empty-state {
+    min-height: 200px;
+  }
+}
